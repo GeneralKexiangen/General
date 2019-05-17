@@ -15,13 +15,8 @@ data = cursor.fetchall()
 # for x in data:
 #     print(x[0])
 
-print("Content-type: text/html")
-print()
-print("<meta charset=\"utf-8\">")
-print("<b>环境变量</b><br>")
-print("<ul>")
-for key in data:
-    print("<li><span style='color:green'>%30s </span> :  </li>" % key[0])
-print("</ul>")
-
+j = 0
+for id in data:
+    print(j,id[0])
+    j+=1
 db.close()
